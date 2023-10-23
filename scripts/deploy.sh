@@ -16,7 +16,7 @@ apt upgrade -y
 rm -rf /tmp/iaw-practica-lamp
 
 #Clonamos el repositorio con el codigo fuente de la aplicación:
-52.72.106.122
+
 git clone https://github.com/josejuansanchez/iaw-practica-lamp.git /tmp/iaw-practica-lamp
 
 #Copiamos el cod fuente de la app /var/www/html
@@ -25,11 +25,15 @@ mv /tmp/iaw-practica-lamp/src/* /var/www/html
 
 #Configuramos el archivo config.php de la app
 
-sed -i "s/database_name_here/ $DB_NAME/" /var/www/html/config.php
+sed -i "s/database_name_here/$DB_NAME/" /var/www/html/config.php
 
-sed -i "s/username_here/ $DB_USER/" /var/www/html/config.php
+sed -i "s/username_here/$DB_USER/" /var/www/html/config.php
 
-sed -i "s/password_here/ $DB_PASSWORD/" /var/www/html/config.php
+sed -i "s/password_here/$DB_PASSWORD/" /var/www/html/config.php
+
+# Modificamos el script de base de datos
+
+sed -i "s/lamp_db/$DB_NAME/" /tmp/iaw-practica-lamp/db/database.sql
 
 #Importar el script de la base de datos
 
