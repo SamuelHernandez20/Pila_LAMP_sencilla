@@ -22,7 +22,7 @@ apt install mysql-server -y
 #Instalacion del php
 
 apt install php libapache2-mod-php php-mysql -y
-
+AWS
 
 #Copiar el archivo de conf de apache
 

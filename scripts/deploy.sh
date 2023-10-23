@@ -16,7 +16,7 @@ apt upgrade -y
 rm -rf /tmp/iaw-practica-lamp
 
 #Clonamos el repositorio con el codigo fuente de la aplicación:
-
+52.72.106.122
 git clone https://github.com/josejuansanchez/iaw-practica-lamp.git /tmp/iaw-practica-lamp
 
 #Copiamos el cod fuente de la app /var/www/html
@@ -40,3 +40,4 @@ mysql -u root < /tmp/iaw-practica-lamp/db/database.sql
 mysql -u root <<< "DROP USER IF EXISTS '$DB_USER'@'%'"
 mysql -u root <<< "CREATE USER '$DB_USER'@'%' IDENTIFIED BY '$DB_PASSWORD'"
 mysql -u root <<< "GRANT ALL PRIVILEGES ON $DB_NAME.* TO '$DB_USER'@'%'"
+
